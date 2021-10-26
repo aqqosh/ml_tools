@@ -74,3 +74,16 @@ x2_sub_copy = x2[:2, :2].copy()
 x2_sub_copy[0, 0] = 0
 print(x2) # array x2 hasn't changed
 
+##############################
+#           RESHAPE
+##############################
+
+grid = np.arange(1, 10).reshape((3, 3))
+
+y = np.array([1, 2, 3])
+
+y.reshape((1, 3)) 
+y[np.newaxis, :]
+
+y.reshape((3, 1))
+y[:, np.newaxis]
