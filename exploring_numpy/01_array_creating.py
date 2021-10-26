@@ -57,9 +57,20 @@ for example in [x1, x2, x3]:
         example.itemsize, example.nbytes)
     print(meaning_str)
 
+##############################
+#         SUBARRAYS
+##############################
 
+x2[:2, :3] # 2 lines, 3 rows
+x2[:3, ::2] # all lines, each second row
+x2[:, 0] # first row
+x2[0, :] # first line == x2[0]
 
+x2_sub = x2[:2, :2] # create view (and not copy)
+x2_sub[0, 0] = 99
+print(x2) # array x2 has changed
 
-
-
+x2_sub_copy = x2[:2, :2].copy()
+x2_sub_copy[0, 0] = 0
+print(x2) # array x2 hasn't changed
 
