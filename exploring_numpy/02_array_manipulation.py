@@ -40,8 +40,18 @@ palette = np.array([[0, 0, 0],
                     [0, 255, 0],
                     [0, 0, 255],
                     [255, 255, 255]])
-
 image = np.array([[0, 1, 2, 0],
                     [0, 3, 4, 0]])
-
 palette[image]
+
+a = np.arange(12).reshape(3, 4)
+i = np.array([[0, 1],  # indices for the first dim of `a`
+              [1, 2]])
+j = np.array([[2, 1],  # indices for the second dim
+              [3, 3]])
+a[i, j]
+
+a = np.arange(30)
+b = a.reshape((1, -1, 3))  # -1 means "whatever is needed"
+b.shape
+
