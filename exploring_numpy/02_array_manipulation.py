@@ -27,3 +27,21 @@ y = np.array([[99], [99]])
 np.hstack([grid, y])
 
 #np.dstack по третьей оси
+
+a = np.arange(12)**2
+i = np.array([1, 1, 3, 8, 5])
+a[i]
+
+j = np.array([[3, 4], [9, 7]])
+a[j]
+
+palette = np.array([[0, 0, 0],
+                    [255, 0, 0], 
+                    [0, 255, 0],
+                    [0, 0, 255],
+                    [255, 255, 255]])
+
+image = np.array([[0, 1, 2, 0],
+                    [0, 3, 4, 0]])
+
+palette[image]
