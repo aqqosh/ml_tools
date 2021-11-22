@@ -19,12 +19,12 @@ d_sums = cuda.to_device(sums)
 
 # kernel definition
 @cuda.jit
-def row_sums(a, sums, n):
+def row_sums(a, sums, ds):
     idx = cuda.grid(1)
     sum = 0.0
 
-    for i in range(n):
-        sum += a[idx][i]
+    for i in range(ds):
+        sum += a[i][idx]
 
     sums[idx] = sum
 
